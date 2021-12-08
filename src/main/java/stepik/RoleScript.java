@@ -5,10 +5,10 @@ public class RoleScript {
     private String printTextPerRole(String[] roles, String[] textLines) {
         StringBuilder builder = new StringBuilder(); //создаем новую строку
         for (int i = 0; i < roles.length; i++) { //проходим по массиву ролей
-            builder.append(roles[i]).append(":\n"); //после каждой роли ставим новую строку и двоеточие
+            builder.append(roles[i]).append(":\n"); //ищем роль и добавляем в новую строку/после каждой роли ставим двоеточие и переход строки
             for (int j = 0; j < textLines.length; j++) { //проходим по массиву такста
                 if (textLines[j].startsWith(roles[i].concat(":"))) { //если текст начинаеться с роли то обединяем их на двоеточии
-                    builder.append(j + 1).append(") ").append(textLines[j].substring(textLines[j].indexOf(":") + 2)) //прохорашиваем вид и нумерацию строк
+                    builder.append(j + 1).append(") ").append(textLines[j].substring(textLines[j].indexOf(":") + 2)) //добавляем в строку с пробелом прохорашиваем вид и нумерацию строк
                             .append("\n");
                 }
             }
