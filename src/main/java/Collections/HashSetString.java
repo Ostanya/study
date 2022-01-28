@@ -1,9 +1,9 @@
-package Sets;
+package Collections;
 
 import java.util.HashSet;
 import java.util.Iterator;
 
-public class SetTreeTry {
+public class HashSetString {
     public static void main(String[] args) {
         HashSet<String> hs = new HashSet<String>();
         hs.add("Australia");
